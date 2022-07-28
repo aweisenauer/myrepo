@@ -9,7 +9,7 @@ public class VendingMachineCLI {
 
 	public static void main(String[] args) {
 VendingMachineBuilder vendingMachineBuilder = new VendingMachineBuilder();
-		VendingMachineMoney vendingMachineMoney = new VendingMachineMoney();
+//		VendingMachineMoney vendingMachineMoney = new VendingMachineMoney();
 		VendingMachine vendingMachine = new VendingMachine(vendingMachineBuilder);
 		vendingMachine.run();
 	}

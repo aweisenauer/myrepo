@@ -33,7 +33,7 @@ public class VendingMachine {
             }
             else if(choice.equals("purchase")) {
                 // make a purchase
-                String choice2 = userInput.getPurchaseScreenOptions(vendingMachineMoney.getBalance());
+               String choice2 = userInput.getPurchaseScreenOptions(vendingMachineMoney.getBalance());
 
             }
             else if(choice.equals("exit")) {

@@ -7,6 +7,7 @@ package com.techelevator.Inventory;
         private double price;
         private String slot;
         private String type;
+        public int quantity;
 
         //constructor
         public VendingMachineItems(String slot, String name, double price, String type) {
@@ -14,6 +15,7 @@ package com.techelevator.Inventory;
             this.price = price;
             this.slot = slot;
             this.type = type;
+            this.quantity = 6; //every item starts with 6 units
 
         }
 
@@ -51,5 +53,13 @@ package com.techelevator.Inventory;
 
         public void setType(String type) {
             this.type = type;
+        }
+
+        public int getQuantity() {
+            return quantity;
+        }
+
+        public void setQuantity(int quantity) {
+            this.quantity = quantity;
         }
     }
