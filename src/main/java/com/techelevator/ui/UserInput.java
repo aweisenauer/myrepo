@@ -1,5 +1,8 @@
 package com.techelevator.ui;
 
+import com.techelevator.reader.VendingMachineBuilder;
+
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -37,6 +40,29 @@ public class UserInput {
             return "";
         }
 
-    }
+public String getPurchaseScreenOption(){
+            System.out.println();
+            System.out.println("Please select an option?");
+            System.out.println();
+            System.out.println("(M) Feed Money");
+            System.out.println("(S) Select an Item");
+            System.out.println("(F) Finish Transaction");
+
+            String purchaseOption = scanner.nextLine();
+            String optionForPurchase = purchaseOption.trim().toLowerCase();
+            System.out.println("option = " + optionForPurchase);
+
+            if (optionForPurchase.equals("m")){
+                return "Feed Money";
+            } 
+
+            }
+
+
+
+        }
+
+
+
 }
 
