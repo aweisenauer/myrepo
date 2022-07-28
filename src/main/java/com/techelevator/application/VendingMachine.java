@@ -2,6 +2,7 @@ package com.techelevator.application;
 
 import com.techelevator.Inventory.VendingMachineItems;
 import com.techelevator.reader.VendingMachineBuilder;
+import com.techelevator.transaction.VendingMachineMoney;
 import com.techelevator.ui.UserInput;
 import com.techelevator.ui.UserOutput;
 
@@ -9,6 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VendingMachine {
+    VendingMachineMoney vendingMachineMoney = new VendingMachineMoney();
+
     private Map<String, VendingMachineItems> inventory = new HashMap<>();
     public VendingMachine(VendingMachineBuilder vendingMachineBuilder){
         inventory = vendingMachineBuilder.getInventory();
@@ -29,9 +32,16 @@ public class VendingMachine {
             }
             else if(choice.equals("purchase")) {
                 // make a purchase
-//                UserOutput.displayPurchaseScreen();
-//                String choice = userInput.
+                String choice2 = userInput.getPurchaseScreenOptions(vendingMachineMoney.getBalance());
+                if(choice2.equals("M")){
+                    vendingMachineMoney.feedMoney(userInput.getAmountFromUser());
+                }else if(choice2.equals("S")){
+                    UserOutput.displayInventoryItems(inventory);
+                    System.out.println("Please enter the slot number: ");
 
+                }else{
+                    System.out.println("put return money");
+                }
             }
             else if(choice.equals("exit")) {
                 // good bye
