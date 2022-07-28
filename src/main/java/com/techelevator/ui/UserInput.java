@@ -29,40 +29,42 @@ public class UserInput {
         System.out.println("option = " + option);
         if (option.equals("d")) {
             return "display";
-        }
-        else if (option.equals("p")) {
+        } else if (option.equals("p")) {
             return "purchase";
-        }
-        else if (option.equals("e")) {
+        } else if (option.equals("e")) {
             return "exit";
-        }
-        else {
+        } else {
             return "";
         }
-
-public String getPurchaseScreenOption(){
+    }
+        public String getPurchaseScreenOption () {
+            System.out.println("What would you like to do?");
             System.out.println();
-            System.out.println("Please select an option?");
+
+            System.out.println("D) Display Items");
+            System.out.println("P) Purchase");
+            System.out.println("E) Exit");
+
             System.out.println();
-            System.out.println("(M) Feed Money");
-            System.out.println("(S) Select an Item");
-            System.out.println("(F) Finish Transaction");
+            System.out.print("Please select an option: ");
 
-            String purchaseOption = scanner.nextLine();
-            String optionForPurchase = purchaseOption.trim().toLowerCase();
-            System.out.println("option = " + optionForPurchase);
-
-            if (optionForPurchase.equals("m")){
-                return "Feed Money";
-            } 
-
+            String selectedOption = scanner.nextLine();
+            String option = selectedOption.trim().toLowerCase();
+            System.out.println("option = " + option);
+            if (option.equals("d")) {
+                return "display";
+            } else if (option.equals("p")) {
+                return "purchase";
+            } else if (option.equals("e")) {
+                return "exit";
+            } else {
+                return "";
             }
 
 
-
         }
+
 
 
 
 }
-

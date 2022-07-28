@@ -16,6 +16,7 @@ public class VendingMachine {
     UserInput userInput = new UserInput();
     UserOutput userOutput = new UserOutput();
 
+
     public void run() {
         while(true) {
             userOutput.displayHomeScreen();
