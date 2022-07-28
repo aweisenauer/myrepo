@@ -33,7 +33,7 @@ public class VendingMachineBuilder {
                 else item = new Candy(itemProperties[0],itemProperties[1],Double.parseDouble(itemProperties[2]),itemProperties[3]);
 
                 item.setName(itemProperties[1]);
-                // item.setDescription(itemProperties[2]);
+                item.setSlot(itemProperties[0]);
                 item.setPrice(Double.parseDouble(itemProperties[2]));
                 inventory.put(itemProperties[1],item);
 

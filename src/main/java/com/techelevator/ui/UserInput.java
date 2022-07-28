@@ -2,6 +2,7 @@ package com.techelevator.ui;
 
 import com.techelevator.Inventory.VendingMachineItems;
 import com.techelevator.reader.VendingMachineBuilder;
+import com.techelevator.transaction.PurchaseItem;
 import com.techelevator.transaction.VendingMachineMoney;
 
 import java.util.Locale;
@@ -39,31 +40,9 @@ public class UserInput {
             return "";
         }
     }
-<<<<<<< HEAD
-        public String getPurchaseScreenOption () {
-            System.out.println("What would you like to do?");
-            System.out.println();
 
-            System.out.println("D) Display Items");
-            System.out.println("P) Purchase");
-            System.out.println("E) Exit");
 
-            System.out.println();
-            System.out.print("Please select an option: ");
 
-            String selectedOption = scanner.nextLine();
-            String option = selectedOption.trim().toLowerCase();
-            System.out.println("option = " + option);
-            if (option.equals("d")) {
-                return "display";
-            } else if (option.equals("p")) {
-                return "purchase";
-            } else if (option.equals("e")) {
-                return "exit";
-            } else {
-                return "";
-            }
-=======
 
     public String getPurchaseScreenOptions(Double currentBalance) {
 
@@ -79,7 +58,7 @@ public class UserInput {
 
         String optionForPurchase = purchaseOption.trim().toLowerCase();
         System.out.println("option = " + optionForPurchase);
->>>>>>> ca8bf24ad8f8788cb4ae43b62e52414eca834857
+
 
         if (optionForPurchase.equals("m")) {
             return "Feed Money";
@@ -89,9 +68,7 @@ public class UserInput {
             return null;
         }
 
-<<<<<<< HEAD
-        }
-=======
+
         return purchaseOption;
     }
     public double getAmountFromUser(){
@@ -101,7 +78,7 @@ public class UserInput {
 
         return doubleAmount;
     }
->>>>>>> ca8bf24ad8f8788cb4ae43b62e52414eca834857
+
 
 
 
