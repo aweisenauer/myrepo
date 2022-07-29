@@ -18,7 +18,9 @@ package com.techelevator.Inventory;
             this.quantity = 6; //every item starts with 6 units
 
         }
-
+public void itemDispensed(){
+            quantity--;
+}
 public abstract String noise();
 
         //getters and setters

@@ -66,9 +66,11 @@ public String getInputFromUser(String message){
         }else if(optionForPurchase.equals("s")){
         return "Select Item";
         }else if (optionForPurchase.equals("f")){
-            return null;
+            return "Finish Transaction";
         }
         return purchaseOption;
     }
+
+
 
 }
