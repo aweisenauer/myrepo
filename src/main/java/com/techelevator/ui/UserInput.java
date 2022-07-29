@@ -2,7 +2,6 @@ package com.techelevator.ui;
 
 import com.techelevator.Inventory.VendingMachineItems;
 import com.techelevator.reader.VendingMachineBuilder;
-import com.techelevator.transaction.PurchaseItem;
 import com.techelevator.transaction.VendingMachineMoney;
 
 import java.util.Locale;
@@ -41,7 +40,11 @@ public class UserInput {
         }
     }
 
-
+public String getInputFromUser(String message){
+    System.out.println(message);
+    String userAnswer = scanner.nextLine();
+    return userAnswer;
+}
 
 
     public String getPurchaseScreenOptions(Double currentBalance) {

@@ -19,7 +19,7 @@ package com.techelevator.Inventory;
 
         }
 
-
+public abstract String noise();
         //getters and setters
 
 

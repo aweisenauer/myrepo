@@ -4,7 +4,6 @@ import com.techelevator.Inventory.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,9 +15,8 @@ public class VendingMachineBuilder {
         File file = new File ("catering.csv");
 
         Map<String, VendingMachineItems> inventory = new HashMap<>();
-        try(Scanner fileScanner = new Scanner(file); PrintWriter writer = new PrintWriter("Audit.txt")) {
+        try(Scanner fileScanner = new Scanner(file)) {
             while(fileScanner.hasNextLine()){
-                writer.println();
                 String[] itemProperties = fileScanner.nextLine().split("\\,");
                 System.out.println(itemProperties);
                 VendingMachineItems item;
