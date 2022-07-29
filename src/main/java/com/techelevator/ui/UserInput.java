@@ -53,6 +53,7 @@ public String getInputFromUser(String message){
         System.out.println("(F) Finish Transaction");
         System.out.println();
         System.out.println("Current Money Provided: " + (currentBalance));////!!!!!!!!!!!!!!!!!
+        System.out.println();
         System.out.println("Please select an option?");
         String purchaseOption = scanner.nextLine();
         System.out.println();

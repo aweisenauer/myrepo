@@ -20,8 +20,8 @@ package com.techelevator.Inventory;
         }
 
 public abstract String noise();
-        //getters and setters
 
+        //getters and setters
 
         public String getName() {
             return name;
@@ -63,3 +63,4 @@ public abstract String noise();
             this.quantity = quantity;
         }
     }
+

@@ -15,6 +15,7 @@ public class VendingMachineBuilder {
         File file = new File ("catering.csv");
 
         Map<String, VendingMachineItems> inventory = new HashMap<>();
+
         try(Scanner fileScanner = new Scanner(file)) {
             while(fileScanner.hasNextLine()){
                 String[] itemProperties = fileScanner.nextLine().split("\\,");
@@ -34,15 +35,9 @@ public class VendingMachineBuilder {
                 item.setSlot(itemProperties[0]);
                 item.setPrice(Double.parseDouble(itemProperties[2]));
                 inventory.put(itemProperties[0],item);
-
-
-
             }
-
-
         } catch (FileNotFoundException e) {
             System.out.println("NO LONGER AVAILABLE");}
-
         return inventory;
     }
 }

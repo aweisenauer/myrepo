@@ -20,6 +20,7 @@ public class UserOutput {
     }
 
     public static void displayInventoryItems(Map<String, VendingMachineItems> inventory) {
+
         for (Map.Entry<String, VendingMachineItems> itemEntry : inventory.entrySet()) {
             System.out.println(itemEntry.getValue().getSlot() + " " + itemEntry.getValue().getName() + " : " + itemEntry.getValue().getPrice() +" : "+itemEntry.getValue().quantity);
         }
