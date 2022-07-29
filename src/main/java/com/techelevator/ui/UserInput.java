@@ -46,44 +46,28 @@ public String getInputFromUser(String message){
     return userAnswer;
 }
 
-
     public String getPurchaseScreenOptions(Double currentBalance) {
 
         System.out.println("(M) Feed Money");
         System.out.println("(S) Select an Item");
         System.out.println("(F) Finish Transaction");
         System.out.println();
-        System.out.println("Current Money Provided: " + (currentBalance + getAmountFromUser()));
+        System.out.println("Current Money Provided: " + (currentBalance));////!!!!!!!!!!!!!!!!!
         System.out.println("Please select an option?");
         String purchaseOption = scanner.nextLine();
         System.out.println();
 
-
         String optionForPurchase = purchaseOption.trim().toLowerCase();
         System.out.println("option = " + optionForPurchase);
-
 
         if (optionForPurchase.equals("m")) {
             return "Feed Money";
         }else if(optionForPurchase.equals("s")){
-        return purchaseOption;
+        return "Select Item";
         }else if (optionForPurchase.equals("f")){
             return null;
         }
-
-
         return purchaseOption;
     }
-    public double getAmountFromUser(){
-        System.out.println("Please enter dollar amount: 1, 5, 10 or 20");
-        String userAmount = scanner.nextLine();
-        double doubleAmount = Double.parseDouble(userAmount);
-
-        return doubleAmount;
-    }
-
-
-
-
 
 }

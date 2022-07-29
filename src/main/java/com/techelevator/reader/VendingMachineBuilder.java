@@ -33,7 +33,7 @@ public class VendingMachineBuilder {
                 item.setName(itemProperties[1]);
                 item.setSlot(itemProperties[0]);
                 item.setPrice(Double.parseDouble(itemProperties[2]));
-                inventory.put(itemProperties[1],item);
+                inventory.put(itemProperties[0],item);
 
 
 

@@ -5,23 +5,27 @@ import com.techelevator.ui.UserInput;
 public class VendingMachineMoney {
     // add var
     private double balance = 0;
+    private double depositAmount ;
+
 
 
     public double feedMoney(double depositAmount){
-     balance = (balance + depositAmount)*100;
+     balance = (balance + depositAmount);
         return balance;
     }
     public double withdrawPurchase(double withdrawAmount){
-        balance = (balance - withdrawAmount)*100;
+        balance = (balance - withdrawAmount);
         return balance;
     }
-
+    public double getDepositAmount() {
+        return depositAmount;
+    }
     public double getBalance() {
-        return balance = balance;
+        return this.balance = balance;
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
+        this.balance = balance ;
     }
 
  public static void moneyExchange(){
