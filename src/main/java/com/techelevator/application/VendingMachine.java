@@ -1,5 +1,6 @@
 package com.techelevator.application;
 
+import com.techelevator.Inventory.Candy;
 import com.techelevator.Inventory.VendingMachineItems;
 import com.techelevator.reader.VendingMachineBuilder;
 
@@ -36,16 +37,25 @@ public class VendingMachine {
                     userOutput.displayMessage("You want to buy " + inventory.get(slotNumberFromUser).getName() + " " + inventory.get(slotNumberFromUser).getPrice());
                     double itemPrice = inventory.get(slotNumberFromUser).getPrice();
                     double leftMoney = vendingMachineMoney.withdrawPurchase(itemPrice);
+                    if (inventory.get(slotNumberFromUser).getType().equals("Candy")){
+                        inventory.get(slotNumberFromUser).itemDispensed();
+                        userOutput.displayMessage(inventory.get(slotNumberFromUser).getNoise());
+                    } else if (inventory.get(slotNumberFromUser).getType().equals("Drink")){
+                        inventory.get(slotNumberFromUser).itemDispensed();
+                       userOutput.displayMessage(inventory.get(slotNumberFromUser).getNoise());
+                    } else if (inventory.get(slotNumberFromUser).getType().equals("Munchy")){
+                        inventory.get(slotNumberFromUser).itemDispensed();
+                        userOutput.displayMessage(inventory.get(slotNumberFromUser).getNoise());
+                    } else if (inventory.get(slotNumberFromUser).getType().equals("Gum")){
+                        inventory.get(slotNumberFromUser).itemDispensed();
+                        userOutput.displayMessage(inventory.get(slotNumberFromUser).getNoise());
+                    } else userOutput.displayMessage("That is not a valid item");
 
                     if (leftMoney > 0) {
                         userOutput.displayMessage("You have " + leftMoney + " remaining.");
                     } else if (leftMoney<0){
                         userOutput.displayMessage("Not enough money!");
                     }
-//                        int selectionQuantity = Integer.parseInt(userInput.nextLine());
-//                        vendingMachineItems.quantity-=selectionQuantity;
-//
-//                        //do transaction with balance and item price. include stock of item
                 } else {
                     double changeAmount = vendingMachineMoney.getBalance();
                     userOutput.displayMessage("Your change is: " + changeAmount);

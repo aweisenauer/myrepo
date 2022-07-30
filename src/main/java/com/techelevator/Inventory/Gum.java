@@ -6,7 +6,12 @@ public class Gum extends VendingMachineItems{
     }
 
     @Override
-    public String noise() {
-        return "Chewy Chewy, Lots O Bubbles!";
+    public String getNoise() {
+        return "Chewy Chewy, lots O Bubbles!";
+    }
+
+    @Override
+    public int itemDispensed() {
+        return quantity--;
     }
 }

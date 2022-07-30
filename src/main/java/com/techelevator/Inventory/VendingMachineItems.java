@@ -8,6 +8,7 @@ package com.techelevator.Inventory;
         private String slot;
         private String type;
         public int quantity;
+        private String noise;
 
         //constructor
         public VendingMachineItems(String slot, String name, double price, String type) {
@@ -18,12 +19,17 @@ package com.techelevator.Inventory;
             this.quantity = 6; //every item starts with 6 units
 
         }
-public void itemDispensed(){
-            quantity--;
+public int itemDispensed(){
+         return quantity -= 1;
 }
-public abstract String noise();
+
 
         //getters and setters
+
+
+        public String getNoise() {
+            return noise;
+        }
 
         public String getName() {
             return name;

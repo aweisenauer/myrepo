@@ -6,7 +6,13 @@ public class Candy extends VendingMachineItems{
     }
 
     @Override
-    public String noise() {
-        return "Sugar, Sugar, So Sweet!";
+    public String getNoise() {
+        return "Sugar Sugar, So Sweet!";
+    }
+
+    @Override
+    public int itemDispensed() {
+        return quantity--;
+
     }
 }

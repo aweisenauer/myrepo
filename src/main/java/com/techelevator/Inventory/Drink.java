@@ -6,7 +6,12 @@ public class Drink extends VendingMachineItems{
     }
 
     @Override
-    public String noise() {
+    public String getNoise() {
         return "Drinky Drinky, Slurp Slurp!";
+    }
+
+    @Override
+    public int itemDispensed() {
+        return quantity--;
     }
 }

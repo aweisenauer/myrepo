@@ -7,7 +7,12 @@ public class Munchy extends VendingMachineItems{
     }
 
     @Override
-    public String noise() {
-        return "Munchy Munchy So Good!";
+    public String getNoise() {
+        return "Munchy Muchy, So Good!";
+    }
+
+    @Override
+    public int itemDispensed() {
+       return super.itemDispensed();
     }
 }
