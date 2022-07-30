@@ -1,27 +1,32 @@
 package com.techelevator.reader;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import com.techelevator.application.VendingMachine;
+
+import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class AuditFile {
-
-    File auditReport = new File("audit.txt");
-String dateAndTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("mm/dd/yyyy h:mm:ss "));
-
-    {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(auditReport, true))) {
-            writer.println(dateAndTime + " "+" ");
-
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
+public static void auditWriter(String action, double newMoney, double leftOverMoney){
+    File audit = new File("Audit.txt");
+    try{
+        if (!audit.exists()){
+            audit.createNewFile();
         }
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm:ss a");
+        String formatDateTime = LocalDateTime.now().format(format);
+        FileOutputStream fileOutputStream = new FileOutputStream(audit, true);
+        PrintWriter writer = new PrintWriter(fileOutputStream);
+        writer.println(formatDateTime + " " + String.format("%-19s", action) +" "+ newMoney + " "+leftOverMoney);
+        writer.flush();
+        writer.close();
 
-
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+
+}
+
     }
 
